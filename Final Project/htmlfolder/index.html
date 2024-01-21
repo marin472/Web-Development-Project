@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Arcade Machine</title>
+    <style>
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333;
+}
+
+.arcade-machine {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background-color: #222;
+    border: 10px solid #444;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+.screen {
+    width: 100%;
+    height: 70%;
+    background-color: black;
+    background-position: center;
+}
+
+.screen img{
+    width: 200%;
+    height: 200%;
+    object-position: center;
+    object-fit: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba (0,0,0,0.5);
+    filter: grayscale(20%) brightness(80%) contrast(120%);
+}
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30%;
+    background-color: #111;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-image: radial-gradient(circle, #333 10%, #000 40%, #000 60%, #333 90%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.red {
+    background-color: #FF5733;
+}
+
+.blue {
+    background-color: #3399FF;
+}
+
+.yellow {
+    background-color: #FFD700;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+
+
+/* Add more styling based on your design preferences */
+
+    </style>
+</head>
+<body>
+    <div class="arcade-machine">
+        <div class="screen">
+            <img src="../images/poster-arcade-machine-retro-wave-style_162490-2.jpg" alt="Arcade Screen">
+        </div>
+            <div class="controls">
+                <button class="button" onclick="insertCoin()">Insert Coin</button>
+                <button class="button" onclick="startGame()">Start Game</button>
+                <button class="button" onclick="pauseGame()">Pause</button>
+            </div> 
+    </div>
+
+    <script>
+        function insertCoin() {
+    // Implement your insert coin functionality here
+    console.log("Coin inserted!");
+}
+
+function startGame() {
+    // Implement your start game functionality here
+    console.log("Game started!");
+}
+
+function pauseGame() {
+    // Implement your pause game functionality here
+    console.log("Game paused!");
+}
+
+    </script>
+</body>
+</html>
