@@ -68,6 +68,23 @@ a {
         "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
     }
   </script>
+    function fetchLeaderboard() {
+      fetch('http://localhost:8000/api/leaderboard/')  // Update with your actual API URL
+        .then(response => response.json())
+        .then(data => {
+          const leaderboardDiv = document.createElement('div');
+          data.forEach(entry => {
+            const p = document.createElement('p');
+            p.textContent = `${entry.username}: ${entry.score}`;
+            leaderboardDiv.appendChild(p);
+        });
+        document.body.appendChild(leaderboardDiv);
+      })
+      .catch(error => console.error('Error:', error));
+  }
+
+  fetchLeaderboard();
+</script>
 
 </body>
 </html>
