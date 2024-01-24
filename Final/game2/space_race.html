@@ -1,0 +1,30 @@
+<!--Connect everything together-->
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Game</title>   
+	<link href='styles.css' rel='stylesheet'>
+	<script src="script.js"></script>
+	<script>
+		window.isLoggedIn = !!'{{username}}';
+		window.playername = '{{username}}' || localStorage.getItem('playername');
+	</script>
+</head>
+
+<body>
+	<!--Setting Canvas parameters-->
+	<div class='center'>
+		<canvas id="myCanvas" width="600px" height="800px"></canvas>  
+	</div> 
+
+	<!--Connection to the starting screen-->
+	<div class='right'>
+		<a href="Start_Screen.html">
+			<button>Back</button>
+		</a> 
+	</div>
+	
+	<script src="Space_Race.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!--Leaderboard html-->
+<!--NOTE: THIS FEAUTURE IS STILL UNDER DEVELOPMENT AND THE DISPLAYED VALUES ARE JUST PLACE HOLDERS-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--Set parameters-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='styles.css' rel='stylesheet'>
+		<script src='script.js'></script>
+		<script>
+			window.playername = '{{username}}' || localStorage.getItem('playername');
+		</script>
+		<!--Title-->
+		<title>Leader Board</title>
+	</head>
+
+	<body onload='getLeaders()'>
+		<!--Displayed Title-->
+		<h1>Leader Board</h1>
+
+
+		<!--Display all of the highscores-->
+		<div class='center' id='leaders'>
+		</div>
+
+
+
+		<!--Link to the start screen-->
+		<div class="middle">
+				<!--Link to the game-->
+				<a href="space_race.html">
+					<button id="play">Play</button>
+				</a>
+	
+				<!--Link to the instructions-->
+				<a href="Instructions.html">
+					<button>Instructions</button>
+				</a>
+	
+				<!--Link to the leaderboard-->
+				<a href="Leaderboard.html">
+					<button>Home</button>
+				</a>
+			</div>
+	</body>
+
+</html>

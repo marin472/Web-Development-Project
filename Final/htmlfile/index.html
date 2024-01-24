@@ -4,296 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaming Website</title>
-    <link href="../cssfile/style.css">
-    <style>
-
-.body{
-  background-color: black
-}
-        @import url("https://fonts.googleapis.com/css?family=Orbitron|Quicksand:500");
-.arcade-machine {
-  height: 700px;
-  width: 700px;
-  position: relative;
-  margin: 90px auto;
-  perspective: 35em;
-  cursor: pointer;
-}
-
-.arcade-machine:hover .top .blanket {
-  display: none;
-}
-.arcade-machine:hover .board .button-a {
-  background: #ff0000;
-}
-.arcade-machine:hover .board .button-b {
-  background: #ffff00;
-}
-.arcade-machine:hover .board .button-c {
-  background: #00ff00;
-}
-.arcade-machine .top {
-  height: 15%;
-  width: 71%;
-  position: absolute;
-  top: 5%;
-  left: 14.5%;
-  background: white;
-  background-image: url(https://www.arcadeartwork.org/_data/i/galleries/Marquees1/DonkeyKongJr-me.jpg);
-  background-size: cover;
-  background-position: center center;
-  height: 98px;
-  border: 5px solid #4c4c4c;
-  z-index: 3;
-}
-.arcade-machine .top .blanket {
-  position: absolute;
-  top: 0px;
-  left: 4px;
-  right: 2px;
-  bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.15);
-}
-.arcade-machine .top:before, .arcade-machine .top:after {
-  height: 100%;
-  width: 4%;
-  position: absolute;
-  top: -5%;
-  height: 98px;
-  background: white;
-  border: 5px solid #4c4c4c;
-  content: " ";
-}
-.arcade-machine .top:before {
-  left: -6%;
-}
-.arcade-machine .top:after {
-  right: -6%;
-}
-.arcade-machine > .shadow {
-  height: 80%;
-  width: 65%;
-  position: absolute;
-  top: 5%;
-  left: 19%;
-  background: #cccccc;
-  box-shadow: 0 0 60px #ccc;
-  z-index: -1;
-}
-.arcade-machine .screen-container {
-  height: 53%;
-  width: 62%;
-  position: absolute;
-  top: 14.3%;
-  left: 19%;
-  background: #cccccc;
-  border: 5px solid #4c4c4c;
-  z-index: 1;
-}
-.arcade-machine .screen-container:before, .arcade-machine .screen-container:after {
-  height: 100%;
-  width: 4%;
-  position: absolute;
-  top: -2%;
-  background: white;
-  content: " ";
-  border: 5px solid #4c4c4c;
-  z-index: 2;
-}
-.arcade-machine .screen-container:before {
-  left: -6%;
-}
-.arcade-machine .screen-container:after {
-  right: -6%;
-}
-.arcade-machine .screen-container .shadow {
-  height: 8%;
-  width: 110%;
-  position: absolute;
-  top: 10%;
-  left: -5%;
-  background: rgba(0, 0, 0, 0.1);
-  z-index: 4;
-}
-.arcade-machine .screen-container .screen {
-  height: 75%;
-  width: 86%;
-  position: absolute;
-  top: 15%;
-  left: 5%;
-  background: #a0a0a0;
-  border: 5px solid #4c4c4c;
-  overflow: hidden;
-  text-align: center;
-}
-.arcade-machine .screen-container .screen-display {
-  position: absolute;
-  width: 100%;
-  height: 200%;
-  background-color: #a0a0a0;
-}
-.arcade-machine .screen-container .screen .game-title {
-  position: absolute;
-  top: 5%;
-  width: 100%;
-  text-transform: uppercase;
-  text-align: center;
-  color: #e0e0e0;
-  font-family: "Orbitron", sans-serif, sans-serif;
-  color: red;
-  font-weight: bold;
-}
-.arcade-machine .screen-container .screen .game-title .game-publisher {
-  text-transform: none;
-  color: white;
-  font-weight: normal;
-  margin-top: 3px;
-}
-.arcade-machine .screen-container .screen .game-description {
-  position: absolute;
-  top: 40%;
-  height: 180px;
-  width: 100%;
-  z-index: 10;
-  color: #e0e0e0;
-  font-family: "Orbitron", sans-serif, sans-serif;
-}
-.arcade-machine .screen-container .joystick {
-  height: 6%;
-  width: 5%;
-  background: #0f90c9;
-  position: absolute;
-  top: 91%;
-  left: 17%;
-  border-radius: 50%;
-  border: 5px solid #4c4c4c;
-  z-index: 3;
-}
-.arcade-machine .screen-container .joystick:before {
-  height: 90%;
-  width: 65%;
-  position: absolute;
-  top: 7%;
-  left: 32%;
-  background: #0d78a8;
-  content: "";
-  border-radius: 50%;
-}
-.arcade-machine .screen-container .joystick .stick {
-  height: 200%;
-  width: 40%;
-  position: absolute;
-  top: 100%;
-  left: 30%;
-  background: #4c4c4c;
-  content: "";
-}
-.arcade-machine .screen-container .joystick .stick:before {
-  height: 100%;
-  width: 150%;
-  transform: rotate(90deg);
-  position: absolute;
-  top: 50%;
-  left: -20%;
-  background: #4c4c4c;
-  content: "";
-}
-.arcade-machine .board {
-  height: 20%;
-  width: 66%;
-  position: absolute;
-  top: 61%;
-  left: 18.2%;
-  background: #ccc;
-  transform: rotateX(70deg);
-}
-.arcade-machine .board:before, .arcade-machine .board:after {
-  height: 92%;
-  width: 4%;
-  position: absolute;
-  top: -2%;
-  background: white;
-  content: " ";
-  border: 5px solid #4c4c4c;
-  z-index: 2;
-}
-.arcade-machine .board:before {
-  left: -6%;
-}
-.arcade-machine .board:after {
-  right: -6%;
-}
-.arcade-machine .board .button {
-  height: 15%;
-  width: 6%;
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  border-radius: 50%;
-  border: 5px solid #4c4c4c;
-}
-.arcade-machine .board .button-a {
-  background: #b30000;
-  left: 40%;
-}
-.arcade-machine .board .button-b {
-  background: #b3b300;
-  left: 55%;
-}
-.arcade-machine .board .button-c {
-  background: #00b300;
-  left: 70%;
-}
-.arcade-machine .bottom {
-  height: 10%;
-  width: 75%;
-  position: absolute;
-  top: 77%;
-  left: 13%;
-  background: white;
-  border: 5px solid #4c4c4c;
-}
-.arcade-machine .bottom:before, .arcade-machine .bottom:after {
-  height: 98%;
-  width: 4.3%;
-  position: absolute;
-  top: -9%;
-  background: white;
-  content: " ";
-  border: 5px solid #4c4c4c;
-  z-index: 2;
-}
-.arcade-machine .bottom:before {
-  left: -5.8%;
-}
-.arcade-machine .bottom:after {
-  right: -5.9%;
-}
-
-.game-icon{
-    position: absolute;
-    top: 17px;
-    left: 20px;
-    z-index: 2;
-    transition: transform 0.5 ease-in-out, box-shadow 0.5 ease-in-out;
-    
-}
-.game-icon:hover{
-    transform: scale(1.1) translateY(-10px);
-    box-shadow: 0 0 20px rgba(255, 255, 0, 0.7);
-}
-
-@keyframes translate {
-  from {
-    top: 0;
-  }
-  to {
-    top: 10%;
-  }
-}
-    </style>
+    <link rel="stylesheet" href="../cssfile/startpage.css"/>
+    <link rel="stylesheet" href="../cssfile/style.css"/>
+    <link rel="stylesheet" href="../cssfile/background.css"/>
 </head>
 <body>
+  <div class="bg-animation">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="stars4"></div>
+</div>
     <div class="arcade-machine">
         <div class="shadow"></div>
         <div class="top">
@@ -304,6 +25,9 @@
           <div class="screen">
             <a href="../game1/index.html">
             <img class="game-icon" src="../htmlfile/kisspng-pac-man-world-arcade-game-video-game-pac-man-5ab901ddc861c2.9956962615220740778208.png" alt="Game Icon" style="width: 40px; height: 40px;">
+            </a>
+            <a href="../game2/Start_Screen.html">
+              <img class="rocket-icon" src="../htmlfile/Rocket_Image.png" style="width: 40px; height: 40px;">
             </a>
             <div class="screen-display"></div>
             <div class="game-title">
@@ -322,12 +46,6 @@
         </div>
         <div class="bottom"></div>
       </div> 
-      <div class="bg-animation">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-        <div id="stars4"></div>
-    </div>
 </body>
 </html>
     

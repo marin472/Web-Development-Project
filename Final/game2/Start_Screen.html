@@ -1,0 +1,69 @@
+<html>
+
+	<head>
+		<!--Set the defult shape of the htyml file-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="styles.css" rel="stylesheet">
+		<script>
+			window.playername = '{{username}}' || localStorage.getItem('playername');
+		</script>
+		<script src='script.js'></script>
+	</head>
+
+	<body onload='load()'>
+		<!--Title-->
+		<h1>Space Race</h1>
+
+		<!--Created by-->
+		<p> Created by Evan Hall and John Burtt </p>
+
+		<!--Space ship image-->
+		<img id='logo' src="Rocket_Image.png">
+
+		
+<div class="center">
+			
+				<!--Test input-->
+				<input type="text" id="name" placeholder='Enter name here (max. 10 characters)'>
+				
+				
+				<input type="password" id="password" placeholder='Enter password (if not guest)'>
+			
+			
+			
+				<h2>Welcome back! {{username}}</h2>
+			
+		</div>
+
+		<div class="middle">
+			{{^private}}
+				<button onclick='playAsGuest()'>Play As Guest</button>
+	
+				<button onclick='createAccount()'>Create Account</button>
+	
+				<button onclick='login()'>Log In</button>
+			{{/private}}
+			
+			{{#private}}
+				<button onclick='play()'>Play</button>
+				<button onclick='logout()'>Log Out</button>
+			{{/private}}
+		</div>
+		
+		<div class="middle">
+
+			<!--Link to the instructions-->
+			<a href="Instructions.html">
+				<button>Instructions</button>
+			</a>
+
+			<!--Link to the leaderboard-->
+			<a href="Leaderboard.html">
+				<button>Leaderboards</button>
+			</a>
+		</div>
+
+
+	</body>
+
+</html>
