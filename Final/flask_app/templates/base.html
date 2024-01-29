@@ -1,0 +1,21 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<nav>
+    <ul>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+        <li><a href="/tickets">Support Tickets</a></li>
+    </ul>
+</nav>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Support Tickets</h1>
+    <ul>
+        {% for ticket in tickets %}
+            <li>{{ ticket.title }} - {{ ticket.status }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
